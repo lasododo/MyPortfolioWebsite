@@ -1,0 +1,39 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<div class="py-5">
+    <div class="container">
+        {% for obj in object_list %}
+
+        {% if forloop.counter|divisibleby:2 %}
+
+      <div class="row">
+            <div class="col-md-5 align-self-center">
+          <img class="img-fluid d-block w-100 img-thumbnail" src="{{ obj.image.url  }}" >
+            </div>
+        <div class="col-md-7">
+          <h2 class="text-primary pt-3">{{ obj.title }}</h2>
+          <p class="">{{ obj.description }}</p>
+        </div>
+      </div>
+        {% else %}
+      <div class="row mb-5">
+        <div class="col-md-7">
+          <h2 class="text-primary">{{ obj.title }}</h2>
+          <p class="">{{ obj.description }}</p>
+        </div>
+       <div class="col-md-5 align-self-center">
+          <img class="img-fluid d-block w-100 img-thumbnail" src="{{ obj.image.url  }}" >
+            </div>
+      </div>
+        {% endif %}
+
+        {% endfor %}
+
+        </div>
+</div>
+{% endblock %}

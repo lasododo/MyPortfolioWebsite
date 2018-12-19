@@ -1,0 +1,164 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="pb-3 text-dark text-center">Sometimes is just matter to write things clear.&nbsp;</h1>
+        </div>
+      </div>
+
+      {% for obj in object_list %}
+
+      <div class="row">
+        <div class="py-5 col-md-6">
+          <div class="row">
+            <div class="text-center col-4">
+              <i class="d-block mx-auto fa fa-5x fa-code"></i>
+            </div>
+            <div class="col-8">
+              <h5 class="mb-3 text-primary">
+                <b>{{ obj.title }}</b>
+              </h5>
+              <p class="my-1">
+                {{ obj.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+    <!-- Page Content
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Blog Entries Column
+        <div class="col-md-8">
+
+          <h1 class="my-4 text-primary">BLOG !!!
+            <small>made in DJANGO! uuuu </small>
+          </h1>
+
+
+            {% for obj in object_list %}
+
+                <!-- Blog Post
+                  <div class="card mb-4 text-white bg-dark">
+                    {% if obj.image %}
+                    <!-- {{MEDIA_URL}}
+                    <img class="card-img-top" src="{{ obj.image.url }}" style="max-width:750px;" height="300px" alt="Card image cap">
+                    {% else %}
+                    <h1> No pic </h1>
+                    {% endif %}
+                    <div class="card-body">
+                      <h2 class="card-title">{{ obj.title }}</h2>
+                      <p class="card-text">{{ obj.description|slice:":255" }} ...</p>
+                      <a href="{{ obj.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                      {{ obj.timestamp }}
+                      <a href="#">Start Bootstrap</a>
+                    </div>
+                  </div>
+
+            {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Pagination
+          <ul class="pagination justify-content-center mb-4">
+            <li class="page-item">
+              <a class="page-link" href="#">&larr; Older</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#">Newer &rarr;</a>
+            </li>
+          </ul>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Sidebar Widgets Column
+        <div class="col-md-4 ">
+
+          <!-- Search Widget
+          <div class="card my-4 text-white bg-dark">
+            <h5 class="card-header">Search</h5>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Side Widget
+          <div class="card my-4 text-white bg-dark">
+            <h5 class="card-header">Side Widget</h5>
+            <div class="card-body">
+              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+-->
+{% endblock %}

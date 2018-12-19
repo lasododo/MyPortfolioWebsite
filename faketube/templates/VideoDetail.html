@@ -1,0 +1,28 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+  <div class="py-5 text-white">
+    <div class="container">
+      <div class="row">
+        <div class="order-2 order-md-1 col-md-8 ">
+          {% if object.image %}
+              <video width="640" height="360" controls>
+                <<source src='{{ object.image.url }}' type="video/mp4">
+              </video>
+          {% endif %}
+          <h4> {{ object.title }} </h4>
+          <p> {{ object.timestamp|timesince }} ago </p>
+          <p> {{ object.description|linebreaks }}<br/> </p>
+        </div>
+        <div class=" col-md-4 order-1">
+          <h1> ANOTHER RANDOM VIDEOS HERE : </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

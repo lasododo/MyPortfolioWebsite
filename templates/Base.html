@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include 'includefiles/css.html' %}
+  {% block head %}
+  {% endblock %}
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div class="text-white bg-light">
+  {% include 'includefiles/navbar.html' %}
+
+  {% block content %}
+
+  {% endblock %}
+
+  {% block content2 %}
+
+  {% endblock %}
+
+  {% block redirect %}
+
+  {% endblock %}
+
+  {% block content4 %}
+
+  {% endblock %}
+
+  {% block content5 %}
+
+  {% endblock %}
+
+</div>
+
+
+
+ <!-- Slideshow container -->
+<div>
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <q class="text-white">Talk is cheap. Show me the code.</q>
+    <p class="author">- Linus Torvalds</p>
+  </div>
+
+  <div class="mySlides">
+    <q class="text-white">Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</q>
+    <p class="author">- Rick Cook, The Wizardry Compiled</p>
+  </div>
+
+  <div class="mySlides">
+    <q class="text-white">That's the thing about people who think they hate computers. What they really hate is lousy programmers.</q>
+    <p class="author">- Larry Niven</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">Give a man a program, frustrate him for a day.
+Teach a man to program, frustrate him for a lifetime.</q>
+    <p class="author">- Muhammad Waseem</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">I'm not a great programmer; I'm just a good programmer with great habits.</q>
+    <p class="author">- Kent Beck</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">How you look at it is pretty much how you'll see it</q>
+    <p class="author">- Rasheed Ogunlaru</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?</q>
+    <p class="author">- Brian Kernighan</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">Truth can only be found in one place: the code.</q>
+    <p class="author">- Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</q>
+    <p class="author">- Martin Fowler</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">A language that doesn't affect the way you think about programming is not worth knowing.</q>
+    <p class="author">- Alan J. Perlis</p>
+  </div>
+  <div class="mySlides">
+    <q class="text-white">Object-oriented programming offers a sustainable way to write spaghetti code. It lets you accrete programs as a series of patches.</q>
+    <p class="author">- Paul Graham, Hackers & Painters: Big Ideas from the Computer Age</p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+
+</div>
+</div>
+
+  {% include 'includefiles/jquarry.html' %}
+</body>
+
+</html>

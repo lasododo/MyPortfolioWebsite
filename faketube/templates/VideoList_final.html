@@ -1,0 +1,32 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="text-center mx-auto col-md-12">
+          <h1>Choose from videos</h1>
+        </div>
+      </div>
+      <div class="row">
+        {% for object in object_list %}
+        <div class="col-md-4 p-3">
+          <a href="{{ object.get_absolute_url }}">
+            {% if object.image %}
+                <video class="img-fluid d-block" controls>
+                  <<source src='{{ object.image.url }}' type="video/mp4">
+                </video>
+            {% endif %}
+            <h5>{{ object.title }}</h5>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

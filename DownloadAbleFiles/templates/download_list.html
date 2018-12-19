@@ -1,0 +1,44 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="pb-3 text-dark text-center">Sometimes is just matter to write things clear.&nbsp;</h1>
+        </div>
+      </div>
+
+      {% for obj in object_list %}
+
+      <div class="row">
+        <div class="py-5 col-md-6">
+          <div class="row">
+            <div class="text-center col-4">
+              <i class="d-block mx-auto fa fa-5x fa-code"></i>
+            </div>
+            <div class="col-8">
+              <h5 class="mb-3 text-primary">
+                <b>{{ obj.title }}</b>
+              </h5>
+              <p class="my-1">
+                {{ obj.description }}
+              </p>
+              <a href="{{ obj.file.url  }}"> OPEN FILE </a>
+                <br>
+              <a href="{{ obj.file.url  }}" download> DOWNLOAD FILE </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% endfor%}
+
+
+    </div>
+  </div>
+{% endblock %}

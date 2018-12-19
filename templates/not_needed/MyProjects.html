@@ -1,0 +1,120 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block content %}
+
+  <div class="py-5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="pb-3 ">Sometimes is just matter to write things clear.&nbsp;</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-right col-md-6">
+          <div class="row my-5">
+            <div class="col-2 order-lg-2 col-2 text-center">
+              <i class="d-block fa fa-columns fa-3x"></i>
+            </div>
+            <div class="col-10 text-lg-right text-left order-lg-1">
+              <a href="/DownloadAblePrograms/django">
+              <h4 class="text-primary">Django Projects</h4>
+              </a>
+              <p>This secition includes everything I have done
+                <br>in Django Framework ( like this whole portfolio )</p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-2 order-lg-2 col-2 text-center">
+              <i class="d-block fa fa-circle-thin fa-4x"></i>
+            </div>
+            <div class="col-10 text-lg-right text-left order-lg-1">
+              <a href="/DownloadAblePrograms/Python">
+              <h4 class="text-primary">Python from school</h4>
+              </a>
+              <p>This secition includes everything I have done
+                <br> All python files that i have made in my university</p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-2 order-lg-2 col-2 text-center">
+              <i class="d-block fa  fa-comment-o fa-3x"></i>
+            </div>
+            <div class="col-10 text-lg-right text-left order-lg-1">
+              <a href="">
+              <h4 class="text-primary">/ Games / </h4>
+              </a>
+              <p>In this section I have a game that I did in school
+                <br>like a finishing ( High School &nbsp;Graduation ) project.&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-left col-md-6">
+          <div class="row my-5">
+            <div class="col-2 text-center">
+              <i class="d-block fa fa-battery-empty fa-3x"></i>
+            </div>
+            <div class="col-10">
+              <a href="/DownloadAblePrograms/selenium">
+              <h4 class="text-primary">Selenium Automatization</h4>
+              </a>
+              <p>This section includes everytihing I have done
+                <br>in Selenium ( Proxy Gatherer, G+ poster ... )</p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-2 text-center">
+              <i class="d-block mx-auto fa  fa-clone fa-3x"></i>
+            </div>
+            <div class="col-10">
+              <a href="">
+              <h4 class="text-primary">Classes</h4>
+              </a>
+              <p>Work simultaneously on different panels.
+                <br>Share the work with teammates.</p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-2 text-center">
+              <i class="d-block fa  fa-heart-o fa-3x"></i>
+            </div>
+            <div class="col-10">
+              <a href="/DownloadAblePrograms">
+              <h4 class="text-primary">All Projects</h4>
+              </a>
+              <p>Here you can find all my projects I have done
+                <br>including all from the sections above
+                <br> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+  {% block redirect %}
+{% url 'skills' as skills %}
+
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+
+        <div class="text-center col-2">
+          <i class="d-block mx-auto fa fa-5x fa-code"></i>
+        </div>
+        <div class="col-8 text-center">
+          <p> </p>
+            <a class="nav-link text-white" href="{{ skills }}">
+          <h3> Click here to check my skills and achievements </h3>
+            </a>
+        </div>
+        <div class="text-center col-2">
+          <i class="d-block mx-auto fa fa-5x fa-code"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

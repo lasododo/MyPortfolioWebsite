@@ -1,0 +1,12 @@
+{% for object in object_list %}
+<a href="{{ object.get_absolute_url }}">
+  <h1>{{ object.title }}</h1>
+  {{ object.timestamp|timesince }} ago
+  {{ object.description|linebreaks }}<br/>
+  {% if object.image %}
+      <video width="1280" height="720" controls>
+        <<source src='{{ object.image.url }}' type="video/mp4">
+      </video>
+  {% endif %}
+</a>
+{% endfor %}
